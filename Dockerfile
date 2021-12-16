@@ -7,7 +7,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH
 
-COPY install_rust.sh install_cmake.sh .
+COPY install_rust.sh install_cmake.sh ./
 
 RUN ./install_rust.sh \
     && apt-get update && apt-get install -y --no-install-recommends \
