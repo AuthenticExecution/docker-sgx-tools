@@ -12,7 +12,7 @@ COPY install_rust.sh install_cmake.sh ./
 RUN ./install_rust.sh \
     && apt-get update && apt-get install -y --no-install-recommends \
       pkg-config libssl-dev protobuf-compiler make cmake clang python3 gcc-multilib libz-dev \
-    && rustup default nightly \
+    && rustup default nightly-2021-12-01 \
     && rustup target add x86_64-fortanix-unknown-sgx --toolchain nightly \
     && cargo install fortanix-sgx-tools sgxs-tools \
     && ./install_cmake.sh \
