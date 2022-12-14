@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 WORKDIR /usr/src/install
 
 ## Rust ##
-ARG RUST_TOOLCHAIN=nightly-2022-06-01
+ARG RUST_TOOLCHAIN=nightly-2022-10-01
 
 ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
